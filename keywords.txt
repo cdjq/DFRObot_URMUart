@@ -1,0 +1,64 @@
+#######################################
+# Syntax Coloring Map For DFRObot_URMUart
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+DFRObot_URMUart	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin   KEYWORD2
+available   KEYWORD2
+requestDistance KEYWORD2
+requestTemperature  KEYWORD2
+requestMaxDistance  KEYWORD2
+setMaxDistance  KEYWORD2
+setBaudrate KEYWORD2
+setAddress  KEYWORD2
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+ReceivedCommandStackLength  LITERAL1
+SendingCommandStackLength   LITERAL1
+DefaultTimeOutDuration  LITERAL1
+Header0 LITERAL1
+Header1 LITERAL1
+Header0Index    LITERAL1
+Header1Index    LITERAL1
+AddressIndex    LITERAL1
+LengthIndex LITERAL1
+CommandIndex    LITERAL1
+Content0Index   LITERAL1
+Content1Index   LITERAL1
+RequestDistanceCommand  LITERAL1
+RequestTemperatureCommand   LITERAL1
+RequestMaxDistanceCommand   LITERAL1  
+SetMaxDistanceCommand   LITERAL1
+SetBaudrateCommand  LITERAL1
+SetAddressCommand   LITERAL1
+BroadcastAddress    LITERAL1
+OperationSuccess    LITERAL1
+OperationFailure    LITERAL1
+Baudrate1200BPS LITERAL1
+Baudrate2400BPS LITERAL1
+Baudrate4800BPS LITERAL1
+Baudrate9600BPS LITERAL1
+Baudrate14400BPS    LITERAL1
+Baudrate19200BPS    LITERAL1
+Baudrate28800BPS    LITERAL1
+Baudrate38400BPS    LITERAL1
+Baudrate57600BPS    LITERAL1
+Baudrate115200BPS   LITERAL1
+Baudrate128000BPS   LITERAL1
+Baudrate256000BPS   LITERAL1
