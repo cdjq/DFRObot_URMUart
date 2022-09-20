@@ -1,12 +1,12 @@
 /*!
- * @file DFRObot_URMUart.h
+ * @file DFRobot_URMUart.h
  * @brief 这是一个获取障碍物距离的传感器库
  * @copyright	Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
  * @license The MIT License (MIT)
  * @author [PengKaixing](kaixing.peng@dfrobot.com)
  * @version V1.0.0
  * @date 2022-09-06
- * @url https://github.com/DFRobot/DFRObot_URMUart
+ * @url https://github.com/DFRobot/DFRobot_URMUart
  */
 
 #ifndef DFRObot_URMUart_RELEASE
@@ -55,9 +55,9 @@
 #define Baudrate128000BPS 0x0A
 #define Baudrate256000BPS 0x0B
 
-class DFRObot_URMUart{
+class DFRobot_URMUart{
 public:
-  DFRObot_URMUart(HardwareSerial& theSerial);
+  DFRobot_URMUart(HardwareSerial& theSerial);
     
   /**
    * @struct CallBackState

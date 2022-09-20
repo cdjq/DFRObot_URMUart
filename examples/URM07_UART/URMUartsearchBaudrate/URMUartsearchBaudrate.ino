@@ -6,10 +6,10 @@
  * @author [PengKaixing](kaixing.peng@dfrobot.com)
  * @version V1.0.0
  * @date 2022-09-06
- * @url https://github.com/DFRobot/DFRObot_URMUart
+ * @url https://github.com/DFRobot/DFRobot_URMUart
  */
 
-#include "DFRObot_URMUart.h"
+#include "DFRobot_URMUart.h"
 
 /*Manual：
 1）Connect only ONE URM that you want to get baudrate to an Arduino control board. 
@@ -33,7 +33,7 @@ Search success, Address:10  Baud=256000
 const byte URM_Address = 0xAB;          //if there is only one URM, you can use broadcast address 0xAB
 const unsigned long a_Baudrate[] = {4800, 9600, 14400, 19200, 28800, 38400, 57600, 115200, 128000, 256000};
 
-DFRObot_URMUart urm(URM_SERIAL);  
+DFRobot_URMUart urm(URM_SERIAL);  
 static boolean s_findFlag = false;
 static unsigned long s_baudRate = 0;
 static byte s_Address = 0;
@@ -152,19 +152,19 @@ void commandProcess()
 {
   if (urm.available()) {
     switch (urm.callBackState) {
-      case DFRObot_URMUart::OnTimeOut:
+      case DFRobot_URMUart::OnTimeOut:
         onTimeOut();
         break;
-      case DFRObot_URMUart::OnRequestDistance:
+      case DFRobot_URMUart::OnRequestDistance:
         onRequestDistance(urm.receivedAddress, urm.receivedContent);
         break;
-      case DFRObot_URMUart::OnRequestTemperature:
+      case DFRobot_URMUart::OnRequestTemperature:
         onRequestTemperature(urm.receivedAddress, urm.receivedContent/10.0);
         break;
-      case DFRObot_URMUart::OnSetAddress:
+      case DFRobot_URMUart::OnSetAddress:
         onSetAddress(urm.receivedAddress, urm.receivedContent);
         break;
-      case DFRObot_URMUart::OnWrongStack:
+      case DFRobot_URMUart::OnWrongStack:
         onWrongStack();
         break;
       default:

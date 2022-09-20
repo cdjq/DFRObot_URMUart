@@ -1,12 +1,12 @@
 #######################################
-# Syntax Coloring Map For DFRObot_URMUart
+# Syntax Coloring Map For DFRobot_URMUart
 #######################################
 
 #######################################
 # Datatypes (KEYWORD1)
 #######################################
 
-DFRObot_URMUart	KEYWORD1
+DFRobot_URMUart	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)

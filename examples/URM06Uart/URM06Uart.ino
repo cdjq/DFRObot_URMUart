@@ -6,11 +6,11 @@
  * @author [PengKaixing](kaixing.peng@dfrobot.com)
  * @version V1.0.0
  * @date 2022-09-06
- * @url https://github.com/DFRobot/DFRObot_URMUart
+ * @url https://github.com/DFRobot/DFRobot_URMUart
  */
 
 // Include application, user and local libraries
-#include "DFRObot_URMUart.h"
+#include "DFRobot_URMUart.h"
 
 #define DefaultBaudrate 19200UL         //the Default Baudrate for the Urm06_UART
 #define DefaultAddress 0x11             //the Default Address for the Urm06_UART
@@ -18,7 +18,7 @@
 #define CustomizedTimeOutDuration 500   //Time Out Duration can be Customized in "ms" unit
 
 // Define variables and constants
-DFRObot_URMUart urm(Serial);  //select the Serial port for communication with Urm_UART sensor
+DFRobot_URMUart urm(Serial);  //select the Serial port for communication with Urm_UART sensor
 
 void onTimeOut()
 {
@@ -117,28 +117,28 @@ void commandProcess()
 {
     if (urm.available()) {
         switch (urm.callBackState) {
-            case DFRObot_URMUart::OnTimeOut:
+            case DFRobot_URMUart::OnTimeOut:
                 onTimeOut();
                 break;
-            case DFRObot_URMUart::OnRequestDistance:
+            case DFRobot_URMUart::OnRequestDistance:
                 onRequestDistance(urm.receivedAddress, urm.receivedContent);
                 break;
-            case DFRObot_URMUart::OnRequestTemperature:
+            case DFRobot_URMUart::OnRequestTemperature:
                 onRequestTemperature(urm.receivedAddress, urm.receivedContent/10.0);
                 break;
-            case DFRObot_URMUart::OnRequestMaxDistance:
+            case DFRobot_URMUart::OnRequestMaxDistance:
                 onRequestMaxDistance(urm.receivedAddress, urm.receivedContent);
                 break;
-            case DFRObot_URMUart::OnSetMaxDistance:
+            case DFRobot_URMUart::OnSetMaxDistance:
                 onSetMaxDistance(urm.receivedAddress, urm.receivedContent);
                 break;
-            case DFRObot_URMUart::OnSetBaudrate:
+            case DFRobot_URMUart::OnSetBaudrate:
                 onSetBaudrate(urm.receivedAddress, urm.receivedContent);
                 break;
-            case DFRObot_URMUart::OnSetAddress:
+            case DFRobot_URMUart::OnSetAddress:
                 onSetAddress(urm.receivedAddress, urm.receivedContent);
                 break;
-            case DFRObot_URMUart::OnWrongStack:
+            case DFRobot_URMUart::OnWrongStack:
                 onWrongStack();
                 break;
             default:
@@ -162,7 +162,7 @@ void loop()
     if (millis()-sendingTimer>=1000) {
         sendingTimer=millis();
         
-        //Each function below from DFRObot_URMUart returns the state whether UART Bus is busy or not.
+        //Each function below from DFRobot_URMUart returns the state whether UART Bus is busy or not.
         //If the Bus is busy, wait until the bus is released.
         while(!urm.requestDistance(DefaultAddress)) {
             commandProcess();

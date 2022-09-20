@@ -1,16 +1,16 @@
 /*!
- * @file DFRObot_URMUart.cpp
+ * @file DFRobot_URMUart.cpp
  * @brief 这是一个获取障碍物距离的传感器库
  * @copyright	Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
  * @license The MIT License (MIT)
  * @author [PengKaixing](kaixing.peng@dfrobot.com)
  * @version V1.0.0
  * @date 2022-09-06
- * @url https://github.com/DFRobot/DFRObot_URMUart
+ * @url https://github.com/DFRobot/DFRobot_URMUart
  */
 
-#include "DFRObot_URMUart.h"
-DFRObot_URMUart::DFRObot_URMUart(HardwareSerial& theSerial)
+#include "DFRobot_URMUart.h"
+DFRobot_URMUart::DFRobot_URMUart(HardwareSerial& theSerial)
 :SerialTransceiver(theSerial)
 {
     sendingCommandStack[Header0Index]=Header0;
@@ -24,13 +24,13 @@ DFRObot_URMUart::DFRObot_URMUart(HardwareSerial& theSerial)
     callBackState=OnNull;
 }
 
-boolean DFRObot_URMUart::begin(unsigned long theBaudrate)
+boolean DFRobot_URMUart::begin(unsigned long theBaudrate)
 {
     SerialTransceiver.begin(theBaudrate);
     delay(100);
 }
 
-void DFRObot_URMUart::sendStack(void)
+void DFRobot_URMUart::sendStack(void)
 {
     byte stackLength=sendingCommandStack[LengthIndex]+5;
     
@@ -47,7 +47,7 @@ void DFRObot_URMUart::sendStack(void)
     SerialTransceiver.flush();
 }
 
-boolean DFRObot_URMUart::requestDistance(byte theAddress,unsigned long theTimeOutDuration)
+boolean DFRobot_URMUart::requestDistance(byte theAddress,unsigned long theTimeOutDuration)
 {
     if (isBusy) {
         return false;
@@ -61,7 +61,7 @@ boolean DFRObot_URMUart::requestDistance(byte theAddress,unsigned long theTimeOu
     isBusy=true;
     return true;
 }
-boolean DFRObot_URMUart::requestTemperature(byte theAddress,unsigned long theTimeOutDuration)
+boolean DFRobot_URMUart::requestTemperature(byte theAddress,unsigned long theTimeOutDuration)
 {
     if (isBusy) {
         return false;
@@ -75,7 +75,7 @@ boolean DFRObot_URMUart::requestTemperature(byte theAddress,unsigned long theTim
     isBusy=true;
     return true;
 }
-boolean DFRObot_URMUart::requestMaxDistance(byte theAddress,unsigned long theTimeOutDuration)
+boolean DFRobot_URMUart::requestMaxDistance(byte theAddress,unsigned long theTimeOutDuration)
 {
     if (isBusy) {
         return false;
@@ -91,7 +91,7 @@ boolean DFRObot_URMUart::requestMaxDistance(byte theAddress,unsigned long theTim
 }
 
 
-boolean DFRObot_URMUart::setMaxDistance(byte theAddress,int theMaxDistance, unsigned long theTimeOutDuration)
+boolean DFRobot_URMUart::setMaxDistance(byte theAddress,int theMaxDistance, unsigned long theTimeOutDuration)
 {
     if (isBusy) {
         return false;
@@ -109,7 +109,7 @@ boolean DFRObot_URMUart::setMaxDistance(byte theAddress,int theMaxDistance, unsi
 }
 
 
-boolean DFRObot_URMUart::setBaudrate(byte theAddress,unsigned long theBaudrate, unsigned long theTimeOutDuration)
+boolean DFRobot_URMUart::setBaudrate(byte theAddress,unsigned long theBaudrate, unsigned long theTimeOutDuration)
 {
     if (isBusy) {
         return false;
@@ -166,7 +166,7 @@ boolean DFRObot_URMUart::setBaudrate(byte theAddress,unsigned long theBaudrate, 
     isBusy=true;
     return true;
 }
-boolean DFRObot_URMUart::setAddress(byte theAddress, unsigned long theTimeOutDuration)
+boolean DFRobot_URMUart::setAddress(byte theAddress, unsigned long theTimeOutDuration)
 {
     if (isBusy) {
         return false;
@@ -182,7 +182,7 @@ boolean DFRObot_URMUart::setAddress(byte theAddress, unsigned long theTimeOutDur
     return true;
 }
 
-void DFRObot_URMUart::parseStack(void)
+void DFRobot_URMUart::parseStack(void)
 {
     switch (receivedCommandStack[CommandIndex]) {
         case RequestDistanceCommand:
@@ -255,7 +255,7 @@ void DFRObot_URMUart::parseStack(void)
     }
 }
 
-boolean DFRObot_URMUart::validateStack(void)
+boolean DFRobot_URMUart::validateStack(void)
 {
     byte checkSum=0x00;
     byte checkLength=receivedCommandStack[LengthIndex]+5;
@@ -266,7 +266,7 @@ boolean DFRObot_URMUart::validateStack(void)
 }
 
 
-boolean DFRObot_URMUart::available()
+boolean DFRobot_URMUart::available()
 {
     if (isBusy) {
         if (millis()-timeOutTimer>=timeOutDuration) {

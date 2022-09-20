@@ -1,9 +1,9 @@
-# DFRObot_URMUart
+# DFRobot_URMUart
 - [English Version](./README.md)
 
 这个超声波静电换能器设计的一款大功率超声波。测量距离可达10米， 另外一个显著的特点是超声波探测夹角只有15°，而大多数的超声波是60°。
 
-![Product Image](./resources/images/SEN0001.png)
+![Product Image](./resources/images/SEN0149.png)
 
 ## 产品链接（https://www.dfrobot.com.cn/goods-821.html）
 

@@ -6,17 +6,17 @@
  * @author [PengKaixing](kaixing.peng@dfrobot.com)
  * @version V1.0.0
  * @date 2022-09-06
- * @url https://github.com/DFRobot/DFRObot_URMUart
+ * @url https://github.com/DFRobot/DFRobot_URMUart
  */
 
-#include "DFRObot_URMUart.h"
+#include "DFRobot_URMUart.h"
      
 /*todo: set actual parameters*/
 const unsigned long URM_Baudrate = 19200;  
 const byte URM1_Address = 0x11;          //0xAB is broadcast address
 const byte URM2_Address = 22;  
 
-DFRObot_URMUart urm(Serial);  //select the Serial port for communication with Urm sensor
+DFRobot_URMUart urm(Serial);  //select the Serial port for communication with Urm sensor
 
 /*inner define*/
 #define CustomizedTimeOutDuration 300   //Time Out Duration can be Customized in "ms" unit. Default value is 1000ms.
@@ -108,19 +108,19 @@ void commandProcess()
 {
   if (urm.available()) {
     switch (urm.callBackState) {
-      case DFRObot_URMUart::OnTimeOut:
+      case DFRobot_URMUart::OnTimeOut:
         onTimeOut();
         break;
-      case DFRObot_URMUart::OnRequestDistance:
+      case DFRobot_URMUart::OnRequestDistance:
         onRequestDistance(urm.receivedAddress, urm.receivedContent);
         break;
-      case DFRObot_URMUart::OnRequestTemperature:
+      case DFRobot_URMUart::OnRequestTemperature:
         onRequestTemperature(urm.receivedAddress, urm.receivedContent/10.0);
         break;
-      case DFRObot_URMUart::OnSetAddress:
+      case DFRobot_URMUart::OnSetAddress:
         onSetAddress(urm.receivedAddress, urm.receivedContent);
         break;
-      case DFRObot_URMUart::OnWrongStack:
+      case DFRobot_URMUart::OnWrongStack:
         onWrongStack();
         break;
       default:
