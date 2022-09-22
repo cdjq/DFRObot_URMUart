@@ -1,6 +1,6 @@
 /*!
  * @file URMUartset.ino
- * @brief 这是一个使用URM07设置传感器通信地址以及最大探测距离的例子
+ * @brief Set URM07 sensor communication address and max detectable distance 
  * @copyright	Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
  * @license The MIT License (MIT)
  * @author [PengKaixing](kaixing.peng@dfrobot.com)
