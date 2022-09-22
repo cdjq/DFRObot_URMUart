@@ -54,7 +54,7 @@ To use this library, first download the library file, paste it into the \Arduino
    * @brief Request distance data from the sensor 
    * @param theAddress Sensor RS485 address 
    * @param theTimeOutDuration  Request timeout  
-   * @return boolean type, represents data request return status 
+   * @return boolean type, represents the communication status of this command  
    * @retval 0 request fail
    * @retval -1 request success
    */
@@ -65,7 +65,7 @@ To use this library, first download the library file, paste it into the \Arduino
    * @brief Request temperature data from the sensor 
    * @param theAddress Sensor RS485 address
    * @param theTimeOutDuration  Request timeout
-   * @return boolean type, represents data request return status 
+   * @return boolean type, represents the communication status of this command 
    * @retval 0 request fail
    * @retval -1 request success
    */
@@ -74,9 +74,9 @@ To use this library, first download the library file, paste it into the \Arduino
   /**
    * @fn requestMaxDistance
    * @brief Request max detectable distance from sensor 
-   * @param theAddress Sensor RS485 address
-   * @param theTimeOutDuration  Request timeout  
-   * @return boolean type, represent data request return status 
+   * @param theAddress   Sensor RS485 address
+   * @param theTimeOutDuration    Request timeout  
+   * @return boolean type, represents the communication status of this command 
    * @retval 0 request fail
    * @retval -1 request success
    */
@@ -85,10 +85,10 @@ To use this library, first download the library file, paste it into the \Arduino
   /**
    * @fn setMaxDistance
    * @brief Set sensor max detectable distance  
-   * @param theAddress Sensor RS485 address 
-   * @param ptheMaxDistance Max distance to be set 
-   * @param theTimeOutDuration  Request timeout  
-   * @return boolean type, return data set status 
+   * @param theAddress     Sensor RS485 address 
+   * @param ptheMaxDistance     Max distance to be set 
+   * @param theTimeOutDuration    Request timeout  
+   * @return boolean type, represents the communication status of this command  
    * @retval 0 set fail
    * @retval -1 set success
    */
@@ -97,10 +97,10 @@ To use this library, first download the library file, paste it into the \Arduino
   /**
    * @fn setBaudrate
    * @brief Set sensor communication baud rate 
-   * @param theAddress Sensor RS485 baud rate
-   * @param ptheMaxDistance Baud rate to be set 
-   * @param theTimeOutDuration  Request timeout 
-   * @return boolean type, return data set status 
+   * @param theAddress   Sensor RS485 address 
+   * @param theBaudrate  Baud rate to be set 
+   * @param theTimeOutDuration    Request timeout 
+   * @return boolean type, represents the communication status of this command
    * @retval 0 set fail
    * @retval -1 set success
    */
@@ -109,10 +109,9 @@ To use this library, first download the library file, paste it into the \Arduino
   /**
    * @fn setAddress
    * @brief Set sensor communication address 
-   * @param theAddress Sensor RS485 address 
-   * @param ptheMaxDistance 待设置的串口通信波特率
-   * @param theTimeOutDuration  请求超时 
-   * @return boolean类型，表示数据请求返回的状态
+   * @param theAddress  Sensor RS485 address 
+   * @param theTimeOutDuration  Request timeout 
+   * @return boolean type, represents the communication status of this command
    * @retval 0 set fail
    * @retval -1 set success
    */
