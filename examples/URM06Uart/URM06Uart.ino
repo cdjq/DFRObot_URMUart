@@ -1,6 +1,6 @@
 /*!
  * @file URM06Uart.ino
- * @brief 这是一个使用URM06传感器，获取前方障碍物距离的例子
+ * @brief Use this library with URM06 sensor to get the distance between the sensor and obstacle ahead.
  * @copyright	Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
  * @license The MIT License (MIT)
  * @author [PengKaixing](kaixing.peng@dfrobot.com)
