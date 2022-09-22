@@ -1,6 +1,6 @@
 /*!
  * @file URMUartsearchBaudrate.ino
- * @brief Example for scanning URM07 sensor communication address 
+ * @brief Scan URM07 sensor communication address 
  * @copyright	Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
  * @license The MIT License (MIT)
  * @author [PengKaixing](kaixing.peng@dfrobot.com)
