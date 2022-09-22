@@ -1,7 +1,7 @@
 # DFRobot_URMUart
 - [中文版](./README_CN.md)
 
-这个超声波静电换能器设计的一款大功率超声波。测量距离可达10米， 另外一个显著的特点是超声波探测夹角只有15°，而大多数的超声波是60°。
+The ultrasonic sensor detects objects from 20cm to 1000cm and provides range information with 1cm resolution. The URM06 has 15 degree beam angle which has excellent receive sensitivity. And it works best when detecting soft targets.
 
 ![Product Image](./resources/images/SEN0149.png)
 
@@ -32,9 +32,9 @@ To use this library, first download the library file, paste it into the \Arduino
 ```C++
   /**
    * @fn begin
-   * @brief 初始化函数
-   * @param theBaudrate 串口通信波特率
-   * @return boolean类型，表示返回初始化的状态
+   * @brief Init function 
+   * @param theBaudrate Serial communication baud rate 
+   * @return boolean type, return init status
    * @retval 0 fail
    * @retval -1 success
    */
@@ -42,8 +42,8 @@ To use this library, first download the library file, paste it into the \Arduino
 
   /**
    * @fn available
-   * @brief 查看串口数据是否是可获取的
-   * @return boolean类型，表示数据返回的状态
+   * @brief Check if there is available serial data 
+   * @return boolean type, represents data return status 
    * @retval 0 fail
    * @retval -1 success
    */
@@ -51,10 +51,10 @@ To use this library, first download the library file, paste it into the \Arduino
 
   /**
    * @fn requestDistance
-   * @brief 向传感器请求距离数据
-   * @param theAddress 传感器RS485地址
-   * @param theTimeOutDuration  请求超时 
-   * @return boolean类型，表示数据请求返回的状态
+   * @brief Request distance data from the sensor 
+   * @param theAddress Sensor RS485 address 
+   * @param theTimeOutDuration  Request timeout  
+   * @return boolean type, represents data request return status 
    * @retval 0 request fail
    * @retval -1 request success
    */
@@ -62,10 +62,10 @@ To use this library, first download the library file, paste it into the \Arduino
 
   /**
    * @fn requestTemperature
-   * @brief 向传感器请求温度数据
-   * @param theAddress 传感器RS485地址
-   * @param theTimeOutDuration  请求超时 
-   * @return boolean类型，表示数据请求返回的状态
+   * @brief Request temperature data from the sensor 
+   * @param theAddress Sensor RS485 address
+   * @param theTimeOutDuration  Request timeout
+   * @return boolean type, represents data request return status 
    * @retval 0 request fail
    * @retval -1 request success
    */
@@ -73,10 +73,10 @@ To use this library, first download the library file, paste it into the \Arduino
 
   /**
    * @fn requestMaxDistance
-   * @brief 向传感器请求获取最大可探测距离数据
-   * @param theAddress 传感器RS485地址
-   * @param theTimeOutDuration  请求超时 
-   * @return boolean类型，表示数据请求返回的状态
+   * @brief Request max detectable distance from sensor 
+   * @param theAddress Sensor RS485 address
+   * @param theTimeOutDuration  Request timeout  
+   * @return boolean type, represent data request return status 
    * @retval 0 request fail
    * @retval -1 request success
    */
@@ -84,11 +84,11 @@ To use this library, first download the library file, paste it into the \Arduino
   
   /**
    * @fn setMaxDistance
-   * @brief 设置传感器最大可探测距离数据
-   * @param theAddress 传感器RS485地址
-   * @param ptheMaxDistance 待设置的最大距离
-   * @param theTimeOutDuration  请求超时 
-   * @return boolean类型，表示数据请求返回的状态
+   * @brief Set sensor max detectable distance  
+   * @param theAddress Sensor RS485 address 
+   * @param ptheMaxDistance Max distance to be set 
+   * @param theTimeOutDuration  Request timeout  
+   * @return boolean type, return data set status 
    * @retval 0 set fail
    * @retval -1 set success
    */
@@ -96,11 +96,11 @@ To use this library, first download the library file, paste it into the \Arduino
 
   /**
    * @fn setBaudrate
-   * @brief 设置传感器通信波特率
-   * @param theAddress 传感器RS485波特率
-   * @param ptheMaxDistance 待设置的串口通信波特率
-   * @param theTimeOutDuration  请求超时 
-   * @return boolean类型，表示数据请求返回的状态
+   * @brief Set sensor communication baud rate 
+   * @param theAddress Sensor RS485 baud rate
+   * @param ptheMaxDistance Baud rate to be set 
+   * @param theTimeOutDuration  Request timeout 
+   * @return boolean type, return data set status 
    * @retval 0 set fail
    * @retval -1 set success
    */
@@ -108,8 +108,8 @@ To use this library, first download the library file, paste it into the \Arduino
 
   /**
    * @fn setAddress
-   * @brief 设置传感器通信地址
-   * @param theAddress 传感器RS485地址
+   * @brief Set sensor communication address 
+   * @param theAddress Sensor RS485 address 
    * @param ptheMaxDistance 待设置的串口通信波特率
    * @param theTimeOutDuration  请求超时 
    * @return boolean类型，表示数据请求返回的状态
