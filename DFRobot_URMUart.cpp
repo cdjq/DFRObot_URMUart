@@ -1,6 +1,6 @@
 /*!
  * @file DFRobot_URMUart.cpp
- * @brief 这是一个获取障碍物距离的传感器库
+ * @brief A sensor library to get the distance between the sensor and the obstacle ahead. 
  * @copyright	Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
  * @license The MIT License (MIT)
  * @author [PengKaixing](kaixing.peng@dfrobot.com)
