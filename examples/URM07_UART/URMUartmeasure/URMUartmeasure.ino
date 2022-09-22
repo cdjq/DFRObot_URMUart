@@ -1,6 +1,6 @@
 /*!
  * @file URMUartmeasure.ino
- * @brief 这是一个使用URM07两个传感器同时获取前方障碍物距离和板载温度的例子
+ * @brief Use this sensor with two URM07 sensors to get on-board temperature and the distance between the sensors and obstacles ahead.
  * @copyright	Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
  * @license The MIT License (MIT)
  * @author [PengKaixing](kaixing.peng@dfrobot.com)
