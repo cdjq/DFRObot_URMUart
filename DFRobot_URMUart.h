@@ -1,6 +1,6 @@
 /*!
  * @file DFRobot_URMUart.h
- * @brief 这是一个获取障碍物距离的传感器库
+ * @brief A sensor library for getting the distance between the sensor and obstacle ahead 
  * @copyright	Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
  * @license The MIT License (MIT)
  * @author [PengKaixing](kaixing.peng@dfrobot.com)
@@ -61,7 +61,7 @@ public:
     
   /**
    * @struct CallBackState
-   * @brief 用来显示与传感器通信的返回状态
+   * @brief Display the return status of sensor communication  
    */
   enum CallBackState {
       OnNull,
@@ -77,9 +77,9 @@ public:
     
   /**
    * @fn begin
-   * @brief 初始化函数
-   * @param theBaudrate 串口通信波特率
-   * @return boolean类型，表示返回初始化的状态
+   * @brief Init function 
+   * @param theBaudrate  Serial communication baud rate 
+   * @return boolean type, return init status 
    * @retval 0 fail
    * @retval -1 success
    */
@@ -87,8 +87,8 @@ public:
 
   /**
    * @fn available
-   * @brief 查看串口数据是否是可获取的
-   * @return boolean类型，表示数据返回的状态
+   * @brief Check if there is available serial data 
+   * @return boolean type, represents data return status 
    * @retval 0 fail
    * @retval -1 success
    */
@@ -96,10 +96,10 @@ public:
 
   /**
    * @fn requestDistance
-   * @brief 向传感器请求距离数据
-   * @param theAddress 传感器RS485地址
-   * @param theTimeOutDuration  请求超时 
-   * @return boolean类型，表示数据请求返回的状态
+   * @brief Request distance data from the sensor 
+   * @param theAddress Sensor RS485 address 
+   * @param theTimeOutDuration  Request timeout 
+   * @return boolean type, represents the communication status of this command 
    * @retval 0 request fail
    * @retval -1 request success
    */
@@ -107,10 +107,10 @@ public:
 
   /**
    * @fn requestTemperature
-   * @brief 向传感器请求温度数据
-   * @param theAddress 传感器RS485地址
-   * @param theTimeOutDuration  请求超时 
-   * @return boolean类型，表示数据请求返回的状态
+   * @brief Request temperature data from the sensor
+   * @param theAddress Sensor RS485 address
+   * @param theTimeOutDuration  Request timeout 
+   * @return boolean type, represents the communication status of this command
    * @retval 0 request fail
    * @retval -1 request success
    */
@@ -118,10 +118,10 @@ public:
 
   /**
    * @fn requestMaxDistance
-   * @brief 向传感器请求获取最大可探测距离数据
-   * @param theAddress 传感器RS485地址
-   * @param theTimeOutDuration  请求超时 
-   * @return boolean类型，表示数据请求返回的状态
+   * @brief Request max detectable distance from sensor 
+   * @param theAddress Sensor RS485 address
+   * @param theTimeOutDuration  Request timeout   
+   * @return boolean type, represents the communication status of this command
    * @retval 0 request fail
    * @retval -1 request success
    */
@@ -129,11 +129,11 @@ public:
   
   /**
    * @fn setMaxDistance
-   * @brief 设置传感器最大可探测距离数据
-   * @param theAddress 传感器RS485地址
-   * @param ptheMaxDistance 待设置的最大距离
-   * @param theTimeOutDuration  请求超时 
-   * @return boolean类型，表示数据请求返回的状态
+   * @brief Set sensor max detectable distance  
+   * @param theAddress  Sensor RS485 address
+   * @param ptheMaxDistance Max distance to be set 
+   * @param theTimeOutDuration  Request timeout  
+   * @return boolean type, represents the communication status of this command 
    * @retval 0 set fail
    * @retval -1 set success
    */
@@ -141,11 +141,11 @@ public:
 
   /**
    * @fn setBaudrate
-   * @brief 设置传感器通信波特率
-   * @param theAddress 传感器RS485波特率
-   * @param ptheMaxDistance 待设置的串口通信波特率
-   * @param theTimeOutDuration  请求超时 
-   * @return boolean类型，表示数据请求返回的状态
+   * @brief Set sensor communication baud rate 
+   * @param theAddress Sensor RS485 address
+   * @param theBaudrate  Baud rate to be set 
+   * @param theTimeOutDuration  Request timeout 
+   * @return boolean type, represents the communication status of this command
    * @retval 0 set fail
    * @retval -1 set success
    */
@@ -153,11 +153,10 @@ public:
 
   /**
    * @fn setAddress
-   * @brief 设置传感器通信地址
-   * @param theAddress 传感器RS485地址
-   * @param ptheMaxDistance 待设置的串口通信波特率
-   * @param theTimeOutDuration  请求超时 
-   * @return boolean类型，表示数据请求返回的状态
+   * @brief Set sensor communication address
+   * @param theAddress  Sensor RS485 address 
+   * @param theTimeOutDuration  Request timeout 
+   * @return boolean type, represents the communication status of this command
    * @retval 0 set fail
    * @retval -1 set success
    */
